@@ -51,7 +51,7 @@ class UsersController < ApplicationController
     if logged_in?
       @user = User.find_by_slug(params[:slug])
       @tweets = @user.tweets
-      erb :'tweets/tweets'
+      erb :'users/show'
     else
       redirect '/login'
     end
