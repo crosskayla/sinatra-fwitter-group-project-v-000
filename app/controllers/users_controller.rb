@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    binding.pry
     if params.values.any?{|v| v.empty?}
       redirect '/signup'
     else
